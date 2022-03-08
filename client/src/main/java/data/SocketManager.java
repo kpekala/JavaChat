@@ -17,8 +17,18 @@ public class SocketManager {
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
     }
 
-    public void printLine(String message){
+    public void printLine(String message) throws IOException{
         out.println(message);
+        if (out.checkError()){
+            throw new IOException();
+        }
     }
 
+    public String readMessage() throws IOException {
+        return in.readLine();
+    }
+
+    public void disconnect() throws IOException {
+        socket.close();
+    }
 }

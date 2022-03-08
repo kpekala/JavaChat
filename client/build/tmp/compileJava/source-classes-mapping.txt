@@ -1,19 +1,21 @@
+ui/utils/Style.java
+ ui.utils.Style
+data/SendMessageListener.java
+ data.SendMessageListener
+data/ResponseListener.java
+ data.ResponseListener
+data/ReceiveMessageListener.java
+ data.ReceiveMessageListener
+ui/MainPresenter.java
+ ui.MainPresenter
 data/SocketManager.java
  data.SocketManager
-ui/Main.java
- ui.Main
 data/Client.java
  data.Client
+ui/Main.java
+ ui.Main
 ui/MainController.java
  ui.MainController
  ui.MainController$1
-ui/MainPresenter.java
- ui.MainPresenter
-data/ReceiveMessageListener.java
- data.ReceiveMessageListener
-data/ResponseListener.java
- data.ResponseListener
-data/SendMessageListener.java
- data.SendMessageListener
-ui/utils/Style.java
- ui.utils.Style
+ ui.MainController$2
+ ui.MainController$3
