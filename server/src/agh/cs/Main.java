@@ -11,31 +11,13 @@ import java.util.Random;
 public class Main {
 
     private final int portNumber = 12345;
-    private ServerSocket serverSocket;
-
+    private Server server;
 
     public Main(){
         try {
-            listen();
+            server = new Server(new ServerSocket(portNumber));
         } catch (IOException exception) {
             exception.printStackTrace();
-        }
-    }
-
-    private void listen() throws IOException {
-        try {
-            serverSocket = new ServerSocket(portNumber);
-            while(true){
-                Socket clientSocket = serverSocket.accept();
-                connectNewUser(clientSocket);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        finally{
-            if (serverSocket != null){
-                serverSocket.close();
-            }
         }
     }
 
