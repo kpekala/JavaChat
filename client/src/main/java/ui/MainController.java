@@ -60,10 +60,12 @@ public class MainController {
             @Override
             public void success(HashMap<String, Object> response) {
                 System.out.println("message sent");
+                messageField.clear();
             }
             @Override
             public void error(String message) {
                 System.out.println(message);
+                messageField.clear();
             }
         });
     }
